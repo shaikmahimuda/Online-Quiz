@@ -1,0 +1,142 @@
+*{
+    margin:2px;
+    padding: 3px;
+}
+#container{
+    height:auto;
+    display:grid;
+   grid-template-areas: 
+   'header header'
+   'head2 head2'
+   'card card'
+   'footer footer';
+    grid-template-columns: repeat(2,minmax(200px,auto));
+    grid-template-rows: 100px auto minmax(400px,auto)  120px;
+    grid-gap:10px;
+}
+#head{
+    grid-area: header;
+}
+#head1{
+    display:grid;
+    grid-template-columns: 50% 50%  ;
+    grid-template-rows: 50px;
+    background-color: rgb(20, 20, 73);
+    border-radius: 24px;
+}
+#logo{
+    display:grid;
+    grid-template-columns: 30px 30px;
+    grid-template-rows: 40px;
+    gap:40px;
+    align-items: center;
+    color:white;
+}
+#logo>img{
+    width:50px;
+    height:40px;
+    border-radius: 24px;
+}
+#login{
+    display:grid;
+    grid-template-rows: 40px;
+    align-items: center;
+    justify-content: end;
+}
+#login>a>img{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    border:2px solid black;
+}
+#nav{
+    display:flex;
+    border:2px solid green;
+    justify-content: flex-start;
+    padding-left: 80px;
+    gap:50px;
+    align-items: center;
+    background-color: rgb(7, 7, 72);
+    border-radius: 24px;
+}
+#nav>a{
+    text-decoration: none;
+    color:white;
+}
+#head2{
+    grid-area: head2;
+    font-size: 18px;
+}
+#head2>p{
+    padding-top: 10px;
+    padding-left: 20px;
+}
+#head2>h2{
+    display:flex;
+    justify-content: center;
+    color:black;
+}
+#card{
+    grid-area: card;
+     border:2px solid black;
+     display: grid;
+     height:400px;
+     overflow:auto;
+     border-radius: 18px;
+    grid-template-columns: repeat(3,30%);
+    grid-template-rows: repeat(4,60%);
+    grid-column-gap:10px;
+    grid-row-gap:10px;
+    margin:20px;
+    justify-content: space-around;
+}
+.card{
+    border:4px solid black;
+    display: grid;
+    grid-template-areas:'image content1'
+                         'image button' ;
+    grid-template-columns:40% 50%;
+    grid-template-rows:80% 20%;
+    grid-column-gap:20px;
+    background-color: rgb(71, 70, 70);
+    border-radius: 24px;
+}
+#foot{
+    grid-area: footer;
+     border:2px solid red;
+     background-color: rgb(20, 20, 73);
+     color:white;
+     border-radius: 24px;
+}
+#foot>a{
+    text-decoration: none;
+    color:yellow;
+}
+.card>img{
+    grid-area: image;
+    width:100%;
+    height:80%;
+    border: 5px solid black;
+    border-radius: 12px;
+}
+.card>.content{
+    grid-area: content1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.card>button{
+    grid-area: button;
+    border:3px solid black;
+    border-radius: 5px;
+    width:100%;
+    height:30px;
+    cursor:pointer;
+}
+.card>button:hover{
+    background-color: rgb(90, 90, 191);
+}
+
+

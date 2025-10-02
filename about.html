@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        *{
+            margin:2px;
+            padding: 3px;
+        
+
+        }
+        #container1{
+            height:auto;
+            display:grid;
+        grid-template-areas: 
+        'header header'
+        'head2 head2'
+        'container container'
+        'footer footer';
+            grid-template-columns: repeat(2,minmax(200px,auto));
+            grid-template-rows: 100px auto 500px 150px  ;
+            grid-gap:10px;
+        }
+        #head{
+            grid-area: header;
+        }
+        #head1{
+            display:grid;
+            grid-template-columns: 50% 50%  ;
+            grid-template-rows: 50px;
+            background-color: rgb(20, 20, 73);
+        }
+        #logo{
+            display:grid;
+            grid-template-columns: 30px 30px;
+            grid-template-rows: 40px;
+            gap:40px;
+            align-items: center;
+            color:white;
+        }
+        #logo>img{
+            width:50px;
+            height:40px;
+            border-radius: 24px;
+        }
+        #login{
+            display:grid;
+            grid-template-rows: 40px;
+            align-items: center;
+            justify-content: end;
+        }
+        #login>a>img{
+            width:40px;
+            height:40px;
+            border-radius: 50%;
+            border:2px solid black;
+        }
+        #nav{
+            display:flex;
+            border:2px solid green;
+            justify-content: flex-start;
+            padding-left: 80px;
+            gap:50px;
+            align-items: center;
+            background-color: rgb(7, 7, 72);
+        }
+        #nav>a{
+            text-decoration: none;
+            color:white;
+        }
+        #foot{
+            grid-area: footer;
+            border:2px solid red;
+            background-color: rgb(20, 20, 73);
+            color:white;
+        }
+        #foot>a{
+            text-decoration: none;
+            color:yellow;
+        }
+        #container{
+            grid-area: container;
+            display:flex;
+            flex-direction: column;
+            width:100%;
+            height:400px; 
+        }
+        #container>p{
+            padding-bottom: 40px;
+        }
+
+    </style>
+</head>
+<body id="container1">
+    <header id="head">
+        <div id="head1">
+            <div id="logo">
+                <img alt="logo" src="./asserts/Logo.jpeg">
+                <h1>Quiz</h1>
+            </div>
+            <div id="login">
+                <a href="#"><img alt="image" src="./asserts/quiz.jpeg"></a>
+            </div>
+        </div>
+        <nav id="nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="index.html">Quiz's</a>
+            <a href="">Notes</a>
+        </nav>
+    </header>
+    <div id="container">
+    <p>This quiz website centralizes this experience. It allows students to practice, contribute, and track progress. With interactive features and topic-wise categorization, it becomes a dynamic learning hub for aspiring developers.</p>
+    <p>Quizzes are a powerful tool for reinforcing learning and testing understanding. They challenge students to recall concepts, apply logic, and think critically under time constraints. For computer science students, quizzes offer a structured way to assess both theoretical and practical knowledge.</p>
+    <p>Regular quiz practice helps CSE freshers identify gaps in their understanding. Whether it's HTML, SQL, or Machine Learning, answering targeted questions builds confidence and improves retention. It also prepares them for competitive exams and technical interviews.</p>
+    <p>Writing quizzes is equally beneficial. It forces students to dive deeper into topics, frame questions clearly, and anticipate common misconceptions. This strengthens their grasp of core subjects.</p>
+    <p>Creating quizzes also enhances communication and teaching skills. When students write questions for peers, they learn to simplify complex ideas and present them logically. This is a valuable skill in collaborative tech environments.</p>
+    </div>
+    <footer id="foot">
+        <div>
+            This quiz website centralizes this experience. It allows students to practice, contribute, and track progress. With interactive features and topic-wise categorization, it becomes a dynamic learning hub for aspiring developers.
+        </div>
+        <div>Follow ON</div>
+        <a href="www.facebook.com">facebook</a>
+        <a href="www.instagram.com">insta</a>
+        <a href="www.linkedln.com">linkedln</a>
+    </footer>
+</body>
+</html>
